@@ -1,16 +1,16 @@
 package controller;
 
 import java.util.List;
-import DAO.TurmaDAO;
-import model.Turma;
+import DAO.PessoaDAO;
+import models.*;
 import view.AppView;
 import view.TurmaView;
 
 public class AppController {
-    private List<Turma> turmas;
+    private List<Pessoa> turmas;
 
     public AppController() {
-        turmas = TurmaDAO.getTurmas();
+        turmas = PessoaDAO.getTurmas();
     }
 
     public void iniciar() {
@@ -32,6 +32,6 @@ public class AppController {
 
     public void criarTurmaEIncluir() {
         Turma t = new Turma(0, "Nova", 30, 1);
-        TurmaDAO.salvarTurma(t);
+        PessoaDAO.salvarTurma(t);
     }
 }

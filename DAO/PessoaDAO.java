@@ -6,21 +6,20 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import model.Turma;
+import models.*;
 
-public class TurmaDAO {
-    
+public class PessoaDAO {    
 
-    public static List<Turma> getTurmas() {
+    public static List<Pessoa> getPessoas() {
         Connection conn = DBConnection.getInstance().getConnection();
-        List<Turma> retorno = new ArrayList<>();
+        List<Pessoa> retorno = new ArrayList<>();
         try {
-            PreparedStatement ps = conn.prepareStatement("select * from turmas");
+            PreparedStatement ps = conn.prepareStatement("select * from pessoas");
             ResultSet resultSet = ps.executeQuery();
             //resultSet.first();
             while (resultSet.next()) {
-                Turma tmp = new Turma(resultSet.getInt("idTurmas"), resultSet.getString("apelido"),
-                resultSet.getInt("capacidade"), resultSet.getInt("ucs_iducs"));
+                Pessoa tmp = new Pessoa(resultSet.getString("Joãozinho"), resultSet.getString("Rua Tal 123"), resultSet.getString("123456"),
+                resultSet.getString("joaozinho@email.com.br"), resultSet.getString("(51)99123456"));
                 retorno.add(tmp);
                 
             }
