@@ -1,0 +1,7 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\path\\to\\jarfile\\commons-logging-1.1.1.jar",
+        "C:\\Users\\12923116932\\Desktop\\javaDBConnection_demo-master\\lib\\*.jar"
+    ]
+}
