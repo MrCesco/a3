@@ -14,12 +14,12 @@ public class PessoaDAO {
         Connection conn = DBConnection.getInstance().getConnection();
         List<Pessoa> retorno = new ArrayList<>();
         try {
-            PreparedStatement ps = conn.prepareStatement("select * from pessoas");
+            PreparedStatement ps = conn.prepareStatement("select * from cadastros");
             ResultSet resultSet = ps.executeQuery();
             //resultSet.first();
             while (resultSet.next()) {
-                Pessoa tmp = new Pessoa(resultSet.getString("Joãozinho"), resultSet.getString("Rua Tal 123"), resultSet.getString("123456"),
-                resultSet.getString("joaozinho@email.com.br"), resultSet.getString("(51)99123456"));
+                Pessoa tmp = new Pessoa(resultSet.getString("nome_cadastro"), resultSet.getString("local"), resultSet.getString("cpf"),
+                resultSet.getString("email"), resultSet.getString("telefone"), resultSet.getString("tipo_cadastro"));
                 retorno.add(tmp);
                 
             }
@@ -30,13 +30,17 @@ public class PessoaDAO {
         return retorno;
     }
 
-    public static Turma salvarTurma(Turma turma) {
+    public static Pessoa salvarPessoa(Pessoa pessoa) {
         Connection conn = DBConnection.getInstance().getConnection();
         try {
-            PreparedStatement ps = conn.prepareStatement("insert into turmas (apelido, capacidade, ucs_iducs) values (?,?,?)");
-            ps.setString(1, turma.getApelido());
-            ps.setInt(2, turma.getCapacidade());
-            ps.setInt(3, turma.getUcs_iducs());
+            PreparedStatement ps = conn.prepareStatement("insert into cadastros (nome_cadastro, local, cpf, email, telefone, tipo_cadastro) values (?,?,?,?,?,?)");
+            ps.setString(1, pessoa.getNome());
+            ps.setString(2, pessoa.getEndereco());
+            ps.setString(3, pessoa.getCpf());
+            ps.setString(4, pessoa.getEmail());
+            ps.setString(5, pessoa.getTelefone());
+            ps.setString(6, pessoa.getTipo_cadastro());
+            
             ps.executeUpdate();
         } catch (SQLException e) {
             // TODO Auto-generated catch block

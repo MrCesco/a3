@@ -8,9 +8,9 @@ public class AppView {
         System.out.println("2. Incluir turma");
         System.out.println("");
         System.out.println("Escolha sua opção");
-        Scanner scan = new Scanner(System.in);
-        retorno = scan.nextInt();
-
+        try (Scanner scan = new Scanner(System.in)) {
+            retorno = scan.nextInt();
+        }
         return retorno;
     }
 }

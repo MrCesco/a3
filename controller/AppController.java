@@ -4,13 +4,13 @@ import java.util.List;
 import DAO.PessoaDAO;
 import models.*;
 import view.AppView;
-import view.TurmaView;
+import view.PessoaView;
 
 public class AppController {
-    private List<Pessoa> turmas;
+    private List<Pessoa> pessoas;
 
     public AppController() {
-        turmas = PessoaDAO.getTurmas();
+        pessoas = PessoaDAO.getPessoas();
     }
 
     public void iniciar() {
@@ -19,19 +19,19 @@ public class AppController {
             op = AppView.menuInicial();
             switch (op) {
                 case 1:
-                    TurmaView.listarTurmas(turmas);
+                    PessoaView.listarTurmas(pessoas);
                     break;
 
                 case 2:
-                    criarTurmaEIncluir();
+                    criarPessoaEIncluir();
                     break;
     
             }
         } while(op > 0);
     }
 
-    public void criarTurmaEIncluir() {
-        Turma t = new Turma(0, "Nova", 30, 1);
-        PessoaDAO.salvarTurma(t);
+    public void criarPessoaEIncluir() {
+        Pessoa p = new Pessoa("joaozinho", "rua tal 123", "1234", "asihudhiaus@gmail.com", "123123", "ong");
+        PessoaDAO.salvarPessoa(p);
     }
 }
