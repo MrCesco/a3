@@ -7,9 +7,7 @@ public class DBConnection {
     private Connection conn = null;
     private String url = "jdbc:mysql://localhost:3306/";
     private String dbName = "adocaoPets";
-    private String driver = "com.mysql.jdbc.Driver";
-    private DriverManager driverManager = null;
-
+ 
     private DBConnection() {
         try {
             //Class.forName(driver);

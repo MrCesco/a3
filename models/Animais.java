@@ -8,10 +8,9 @@ public abstract class Animais {
     private String peso;
     private String genero;
     private String raca;
-    private Adotante dono;
     private FichaMedica fichaMedica;
-    
-    public Animais(String nome, Date dataNascimento, String cor, String peso, String genero, String raca, Adotante dono,
+
+    public Animais(String nome, Date dataNascimento, String cor, String peso, String genero, String raca,
             FichaMedica fichaMedica) {
         this.nome = nome;
         this.dataNascimento = dataNascimento;
@@ -19,7 +18,6 @@ public abstract class Animais {
         this.peso = peso;
         this.genero = genero;
         this.raca = raca;
-        this.dono = dono;
         this.fichaMedica = fichaMedica;
     }
 
@@ -58,7 +56,7 @@ public abstract class Animais {
     public String getGenero() {
         return genero;
     }
-    
+
     public void setGenero(String genero) {
         this.genero = genero;
     }
@@ -70,14 +68,6 @@ public abstract class Animais {
     public void setRaca(String raca) {
         this.raca = raca;
     }
-    
-    public Adotante getDono() {
-        return dono;
-    }
-
-    public void setDono(Adotante dono) {
-        this.dono = dono;
-    }
 
     public FichaMedica getFichaMedica() {
         return fichaMedica;
@@ -86,6 +76,10 @@ public abstract class Animais {
     public void setFichaMedica(FichaMedica fichaMedica) {
         this.fichaMedica = fichaMedica;
     }
-        
     
+     
+    
+
+    
+
 }

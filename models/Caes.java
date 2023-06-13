@@ -2,11 +2,11 @@ package models;
 import java.util.Date;
 
 public class Caes extends Animais {
-    private String porte;
+    private String porte;    
 
-    public Caes(String nome, Date dataNascimento, String cor, String peso, String genero, String raca, Adotante dono,
+    public Caes(String nome, Date dataNascimento, String cor, String peso, String genero, String raca,
             FichaMedica fichaMedica, String porte) {
-        super(nome, dataNascimento, cor, peso, genero, raca, dono, fichaMedica);
+        super(nome, dataNascimento, cor, peso, genero, raca, fichaMedica);
         this.porte = porte;
     }
 

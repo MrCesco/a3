@@ -1,16 +1,25 @@
 package view;
 import java.util.Scanner;
 
+import controller.AppController;
+
 public class AppView {
-    public static int menuInicial() {
+    private AppController controller;
+    
+    public AppView(AppController controller) {
+        this.controller = controller;
+    }
+
+    public void menuInicial() {
         int retorno = -1;
-        System.out.println("1. Listar turmas");
-        System.out.println("2. Incluir turma");
+        System.out.println("1. Listar pessoas");
+        System.out.println("2. Incluir pessoa");
+        System.out.println("3. Deletar pessoa");
         System.out.println("");
         System.out.println("Escolha sua opção");
-        try (Scanner scan = new Scanner(System.in)) {
+        Scanner scan = new Scanner(System.in);
             retorno = scan.nextInt();
-        }
-        return retorno;
+        
+        controller.opcaoMenuPrincipal(retorno);
     }
 }

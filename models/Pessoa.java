@@ -1,6 +1,7 @@
 package models;
 
 public class Pessoa {
+    private int id;
     private String nome;
     private String endereco;
     private String cpf;
@@ -64,6 +65,14 @@ public class Pessoa {
     public void setTipo_cadastro(String tipo_cadastro) {
         this.tipo_cadastro = tipo_cadastro;
     }
-    
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+   
     
 }
