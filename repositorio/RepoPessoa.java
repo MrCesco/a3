@@ -16,7 +16,7 @@ public class RepoPessoa {
     }
 
     public void criarPessoaEIncluir() {
-        Pessoa p = new Pessoa("joaozinho", "rua tal 123", "1234", "asihudhiaus@gmail.com", "123123", "ong");
+        Pessoa p = new Pessoa(0, null, null, null, null, null, null);
         PessoaDAO.salvarPessoa(p);
         pessoas.add(p);
     }

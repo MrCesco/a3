@@ -1,11 +1,12 @@
 package view;
+
 import java.util.Scanner;
 
 import controller.AppController;
 
 public class AppView {
     private AppController controller;
-    
+
     public AppView(AppController controller) {
         this.controller = controller;
     }
@@ -18,8 +19,9 @@ public class AppView {
         System.out.println("");
         System.out.println("Escolha sua opção");
         Scanner scan = new Scanner(System.in);
-            retorno = scan.nextInt();
-        
+        retorno = scan.nextInt();
+        scan.close();
+
         controller.opcaoMenuPrincipal(retorno);
     }
 }

@@ -8,14 +8,19 @@ public class Pessoa {
     private String email;
     private String telefone;
     private String tipo_cadastro;
-    
-    public Pessoa(String nome, String endereco, String cpf, String email, String telefone, String tipo_cadastro) {
+
+    public Pessoa(int id, String nome, String endereco, String cpf, String email, String telefone,
+            String tipo_cadastro) {
+        this.id = id;
         this.nome = nome;
         this.endereco = endereco;
         this.cpf = cpf;
         this.email = email;
         this.telefone = telefone;
         this.tipo_cadastro = tipo_cadastro;
+    }
+
+    public Pessoa() {
     }
 
     public String getNome() {
@@ -73,6 +78,5 @@ public class Pessoa {
     public void setId(int id) {
         this.id = id;
     }
-   
-    
+
 }
