@@ -1,38 +1,44 @@
 package controller;
 
-import repositorio.RepoPessoa;
+import java.util.Scanner;
+
+import repositorio.RepoAbrigo;
+import repositorio.RepoAdotante;
 import view.AppView;
-import view.PessoaView;
 
 public class AppController {
-    RepoPessoa repopessoa;
+    RepoAbrigo abrigo_list;
+    RepoAdotante adotante_list;
     AppView appview;
     
     public AppController() {
-        repopessoa = new RepoPessoa();
+        abrigo_list = new RepoAbrigo();
+        adotante_list = new RepoAdotante();
         appview = new AppView(this);
     }
 
     public void iniciar() {
-        appview.menuInicial();
+        Scanner leitor = new Scanner(System.in);
+        int selection = appview.menu_principal(leitor);
+
+        switch (selection) {
+            case 1:
+                appview.cadastro_adotante(leitor);
+            break;
+            case 2: 
+                appview.cadastro_abrigo(leitor);
+            break;
+            case 3:
+                appview.cadastro_dono(leitor);
+            break;
+        }
     }
 
-    public void opcaoMenuPrincipal(int op) {
-        switch (op) {
-            case 1:
-                PessoaView.listarPessoas(repopessoa.getAllPessoas());
-                iniciar();
-                break;
+    public RepoAbrigo getAbrigo_list() {
+        return abrigo_list;
+    }
 
-            case 2:
-                repopessoa.criarPessoaEIncluir();
-                iniciar();
-                break;
-            case 3:
-
-                //repopessoa.deletarPessoaById();
-                break;
-
-        }
+    public RepoAdotante getAdotante_list() {
+        return adotante_list;
     }
 }

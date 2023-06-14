@@ -23,6 +23,14 @@ public class Pessoa {
     public Pessoa() {
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getNome() {
         return nome;
     }
@@ -71,12 +79,11 @@ public class Pessoa {
         this.tipo_cadastro = tipo_cadastro;
     }
 
-    public int getId() {
-        return id;
+    @Override
+    public String toString() {
+        return "Pessoa [id=" + id + ", nome=" + nome + ", endereco=" + endereco + ", cpf=" + cpf + ", email=" + email
+                + ", telefone=" + telefone + ", tipo_cadastro=" + tipo_cadastro + "]";
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
+    
 }
