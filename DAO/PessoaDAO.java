@@ -19,7 +19,7 @@ public class PessoaDAO {
             ResultSet resultSet = ps.executeQuery();
             //resultSet.first();
             while (resultSet.next()) {
-                Pessoa tmp = new Pessoa(resultSet.getString("nome_cadastro"), resultSet.getString("local"), resultSet.getString("cpf"),
+                Pessoa tmp = new Pessoa(0, resultSet.getString("nome_cadastro"), resultSet.getString("local"), resultSet.getString("cpf"),
                 resultSet.getString("email"), resultSet.getString("telefone"), resultSet.getString("tipo_cadastro"));
                 tmp.setId(resultSet.getInt("idcadastros"));
                 retorno.add(tmp);                
