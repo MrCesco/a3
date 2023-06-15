@@ -2,10 +2,10 @@ package view;
 
 import java.util.Scanner;
 
-import models.ONG;
+import models.Ong;
 
 public class OngView {
-    public static ONG inserir_ong(Scanner entrada) {
+    public static Ong inserir_ong(Scanner entrada) {
         String nome, local_info, email, telefone, documento, nome_abrigo, cnpj;
 
         System.out.println("Nome do representante do abrigo de animais:");
@@ -29,7 +29,7 @@ public class OngView {
         System.out.println("Telefone do abrigo:");
         telefone = entrada.nextLine();
 
-        ONG ab_info = new ONG(nome, local_info, documento, email, telefone, cnpj, nome_abrigo);
+        Ong ab_info = new Ong(nome, local_info, documento, email, telefone, cnpj, nome_abrigo);
 
         System.out.println("Cadastro concluído");
         System.out.println(ab_info);

@@ -1,10 +1,10 @@
 package models;
 
-public class ONG extends Pessoa {
+public class Ong extends Pessoa {
     private String cnpj;
     private String r_social;
 
-    public ONG(String nome, String endereco, String cpf, String email, String telefone, String cnpj,
+    public Ong(String nome, String endereco, String cpf, String email, String telefone, String cnpj,
             String r_social) {
         super(nome, endereco, cpf, email, telefone);
         this.cnpj = cnpj;
