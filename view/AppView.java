@@ -3,7 +3,7 @@ package view;
 import java.util.Scanner;
 
 import controller.AppController;
-import models.Abrigo;
+import models.ONG;
 import models.Adotante;
 import models.Dono;
 
@@ -45,7 +45,7 @@ public class AppView {
         System.out.println("Telefone:");
         telefone = entrada.nextLine();
 
-        System.out.println("Documento(RG ou CPF):");
+        System.out.println("CPF");
         documento = entrada.nextLine();
 
         Adotante a_info = new Adotante(nome, local_info, documento, email, telefone, tipo);
@@ -63,7 +63,7 @@ public class AppView {
         System.out.println("Nome do representante do abrigo de animais:");
         nome = entrada.nextLine();
 
-        System.out.println("Documento do representante(RG ou CPF):");
+        System.out.println("CPF do representante");
         documento = entrada.nextLine();
 
         System.out.println("Nome do abrigo");
@@ -81,9 +81,9 @@ public class AppView {
         System.out.println("Telefone do abrigo:");
         telefone = entrada.nextLine();
 
-        Abrigo ab_info = new Abrigo(nome, local_info, documento, email, telefone, cnpj, nome_abrigo);
+        ONG ab_info = new ONG(nome, local_info, documento, email, telefone, cnpj, nome_abrigo);
 
-        controller.getAbrigo_list().adicionar_abrigo(ab_info);
+        controller.getOng_list().adicionar_abrigo(ab_info);
 
         System.out.println("Cadastro concluído");
         System.out.println(ab_info);
@@ -105,7 +105,7 @@ public class AppView {
         System.out.println("Telefone:");
         telefone = entrada.nextLine();
 
-        System.out.println("Documento(RG ou CPF):");
+        System.out.println("CPF");
         documento = entrada.nextLine();
 
         Dono d_info = new Dono(nome, local_info, documento, email, telefone, tipo);
