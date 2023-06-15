@@ -1,7 +1,7 @@
 package repositorio;
 
 import java.util.List;
-import DAO.DonoDAO;
+import Dao.DonoDAO;
 import models.Dono;
 
 public class RepoDono {
@@ -21,25 +21,26 @@ public class RepoDono {
         donos.add(d);
     }
 
-    public void deletarDono (Dono Dono) {
+    public void deletarDono(Dono Dono) {
         donos.remove(Dono);
     }
-  
-    public void deletarDonoById (int id) {
-            Dono p = null;
-            for(Dono p1 : donos) {
-            if(p1.getId()==id) {
-                p=p1;
+
+    public void deletarDonoById(int id) {
+        Dono p = null;
+        for (Dono p1 : donos) {
+            if (p1.getId() == id) {
+                p = p1;
             }
         }
         try {
             DonoDAO.deletarDono(p.getId());
             donos.remove(p);
         } catch (NullPointerException e) {
-            System.out.println("Id "+ id +" não encontrado");
-        }        
-      
-     public void dono_add(Dono perfil) {
-        donos_cadastrados.add(perfil);
+            System.out.println("Id " + id + " não encontrado");
+        }
+    }
+
+    public void dono_add(Dono perfil) {
+        donos.add(perfil);
     }
 }
