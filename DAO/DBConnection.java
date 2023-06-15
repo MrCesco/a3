@@ -1,4 +1,3 @@
-/* 
 package DAO;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -11,13 +10,11 @@ public class DBConnection {
  
     private DBConnection() {
         try {
-            //Class.forName(driver);
             conn = DriverManager.getConnection(url + dbName, "root", "");
         } catch (Exception e) {
             
             e.printStackTrace();
         }
-        //System.out.println(conn);
         
     }  
     public static DBConnection getInstance() {
@@ -31,4 +28,3 @@ public class DBConnection {
         return conn;
     }
 }
-*/
