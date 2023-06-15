@@ -12,7 +12,7 @@ public class RepoAdotante {
         adotantes_cadastrados = new ArrayList<Adotante>();
     }
 
-    public void adicionar_adotante(Adotante perfil) {
+    public void a_add(Adotante perfil) {
         adotantes_cadastrados.add(perfil);
     }
 }
