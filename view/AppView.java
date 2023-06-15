@@ -31,7 +31,7 @@ public class AppView {
         System.out.println("Você entrou na área de cadastro para adotar um pet, informe seus dados");
 
         String nome, local_info, email, telefone, documento;
-        int numero_adotante;
+        String tipo = "Adotante";
 
         System.out.println("Nome:");
         nome = entrada.nextLine();
@@ -48,10 +48,7 @@ public class AppView {
         System.out.println("Documento(RG ou CPF):");
         documento = entrada.nextLine();
 
-        System.out.println("Credencial de adotante(número inteiro):");
-        numero_adotante = entrada.nextInt();
-
-        Adotante a_info = new Adotante(0, nome, local_info, documento, email, telefone, "a", numero_adotante);
+        Adotante a_info = new Adotante(nome, local_info, documento, email, telefone, tipo);
 
         controller.getAdotante_list().adicionar_adotante(a_info);
 
@@ -84,7 +81,7 @@ public class AppView {
         System.out.println("Telefone do abrigo:");
         telefone = entrada.nextLine();
 
-        Abrigo ab_info = new Abrigo(0, nome, local_info, documento, email, telefone, "b", cnpj, nome_abrigo);
+        Abrigo ab_info = new Abrigo(nome, local_info, documento, email, telefone, cnpj, nome_abrigo);
 
         controller.getAbrigo_list().adicionar_abrigo(ab_info);
 
@@ -94,6 +91,7 @@ public class AppView {
 
     public void cadastro_dono(Scanner entrada) {
         String nome, local_info, email, telefone, documento;
+        String tipo = "Dono";
 
         System.out.println("Nome:");
         nome = entrada.nextLine();
@@ -110,7 +108,7 @@ public class AppView {
         System.out.println("Documento(RG ou CPF):");
         documento = entrada.nextLine();
 
-        Dono d_info = new Dono(0, nome, local_info, documento, email, telefone, "c", 0);
+        Dono d_info = new Dono(nome, local_info, documento, email, telefone, tipo);
 
         System.out.println(d_info);
         System.out.println("Cadastro concluído");

@@ -7,20 +7,13 @@ public class Pessoa {
     private String cpf;
     private String email;
     private String telefone;
-    private String tipo_cadastro;
 
-    public Pessoa(int id, String nome, String endereco, String cpf, String email, String telefone,
-            String tipo_cadastro) {
-        this.id = id;
+    public Pessoa(String nome, String endereco, String cpf, String email, String telefone) {
         this.nome = nome;
         this.endereco = endereco;
         this.cpf = cpf;
         this.email = email;
         this.telefone = telefone;
-        this.tipo_cadastro = tipo_cadastro;
-    }
-
-    public Pessoa() {
     }
 
     public int getId() {
@@ -71,19 +64,9 @@ public class Pessoa {
         this.telefone = telefone;
     }
 
-    public String getTipo_cadastro() {
-        return tipo_cadastro;
-    }
-
-    public void setTipo_cadastro(String tipo_cadastro) {
-        this.tipo_cadastro = tipo_cadastro;
-    }
-
     @Override
     public String toString() {
         return "Pessoa [id=" + id + ", nome=" + nome + ", endereco=" + endereco + ", cpf=" + cpf + ", email=" + email
-                + ", telefone=" + telefone + ", tipo_cadastro=" + tipo_cadastro + "]";
+                + ", telefone=" + telefone + "]";
     }
-
-    
 }
