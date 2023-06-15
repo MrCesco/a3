@@ -12,7 +12,7 @@ public class RepoDono {
         donos_cadastrados = new ArrayList<Dono>();
     }
 
-    public void adicionar_dono(Dono perfil) {
+    public void dono_add(Dono perfil) {
         donos_cadastrados.add(perfil);
     }
 }

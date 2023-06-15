@@ -4,16 +4,19 @@ import java.util.Scanner;
 
 import repositorio.RepoONG;
 import repositorio.RepoAdotante;
+import repositorio.RepoDono;
 import view.AppView;
 
 public class AppController {
     RepoONG ong_list;
     RepoAdotante adotante_list;
+    RepoDono dono_list;
     AppView appview;
-    
+
     public AppController() {
         ong_list = new RepoONG();
         adotante_list = new RepoAdotante();
+        dono_list = new RepoDono();
         appview = new AppView(this);
     }
 
@@ -23,14 +26,14 @@ public class AppController {
 
         switch (selection) {
             case 1:
-                appview.cadastro_adotante(leitor);
-            break;
-            case 2: 
-                appview.cadastro_abrigo(leitor);
-            break;
+                appview.adotante_info();
+                break;
+            case 2:
+                appview.ong_info();
+                break;
             case 3:
-                appview.cadastro_dono(leitor);
-            break;
+                appview.dono_info();
+                break;
         }
     }
 
@@ -40,5 +43,9 @@ public class AppController {
 
     public RepoAdotante getAdotante_list() {
         return adotante_list;
+    }
+
+    public RepoDono getDono_list() {
+        return dono_list;
     }
 }
