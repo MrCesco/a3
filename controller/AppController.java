@@ -2,17 +2,17 @@ package controller;
 
 import java.util.Scanner;
 
-import repositorio.RepoAbrigo;
+import repositorio.RepoONG;
 import repositorio.RepoAdotante;
 import view.AppView;
 
 public class AppController {
-    RepoAbrigo abrigo_list;
+    RepoONG ong_list;
     RepoAdotante adotante_list;
     AppView appview;
     
     public AppController() {
-        abrigo_list = new RepoAbrigo();
+        ong_list = new RepoONG();
         adotante_list = new RepoAdotante();
         appview = new AppView(this);
     }
@@ -34,8 +34,8 @@ public class AppController {
         }
     }
 
-    public RepoAbrigo getAbrigo_list() {
-        return abrigo_list;
+    public RepoONG getOng_list() {
+        return ong_list;
     }
 
     public RepoAdotante getAdotante_list() {
