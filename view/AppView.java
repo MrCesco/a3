@@ -31,7 +31,7 @@ public class AppView {
         System.out.println("Você entrou na área de cadastro para adotar um pet, informe seus dados");
 
         String nome, local_info, email, telefone, documento;
-        String tipo = "Adorante";
+        String tipo = "Adotante";
 
         System.out.println("Nome:");
         nome = entrada.nextLine();
