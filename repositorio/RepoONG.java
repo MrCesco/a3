@@ -12,7 +12,7 @@ public class RepoONG {
         abrigos_cadastrados = new ArrayList<ONG>();
     }
 
-    public void adicionar_abrigo(ONG perfil) {
+    public void ong_add(ONG perfil) {
         abrigos_cadastrados.add(perfil);
     }
 

@@ -24,7 +24,7 @@ public class RepoDono {
     public void deletarDono (Dono Dono) {
         donos.remove(Dono);
     }
-
+  
     public void deletarDonoById (int id) {
             Dono p = null;
             for(Dono p1 : donos) {
@@ -38,5 +38,8 @@ public class RepoDono {
         } catch (NullPointerException e) {
             System.out.println("Id "+ id +" não encontrado");
         }        
+      
+     public void dono_add(Dono perfil) {
+        donos_cadastrados.add(perfil);
     }
 }
