@@ -10,13 +10,18 @@ public class RepoDono {
     public RepoDono() {
         donos_cadastrados = new ArrayList<Dono>();
     }
-    
     public void dono_add(Dono perfil) {
         donos_cadastrados.add(perfil);
     }
+    public void listagem_donos(){
+        String nome, cpf, endereco, cadastro;
+        for (Dono item : donos_cadastrados) {
+            nome = item.getNome();
+            cpf = item.getCpf();
+            endereco = item.getEndereco();
+            cadastro = item.getTipo_cadastro();
 
-    public void deletarDono(Dono dono) {
-        donos_cadastrados.remove(dono);
+            System.out.println("Dono " + nome + "\n" + "Doc: " + cpf + "\n" + "Endereço: " + endereco + "Tipo de cadastro:" + cadastro);
+        } 
     }
-
 }
