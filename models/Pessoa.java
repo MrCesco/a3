@@ -1,7 +1,6 @@
 package models;
 
 public class Pessoa {
-    private int id;
     private String nome;
     private String endereco;
     private String cpf;
@@ -14,14 +13,6 @@ public class Pessoa {
         this.cpf = cpf;
         this.email = email;
         this.telefone = telefone;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getNome() {
@@ -64,9 +55,5 @@ public class Pessoa {
         this.telefone = telefone;
     }
 
-    @Override
-    public String toString() {
-        return "Pessoa [id=" + id + ", nome=" + nome + ", endereco=" + endereco + ", cpf=" + cpf + ", email=" + email
-                + ", telefone=" + telefone + "]";
-    }
+
 }

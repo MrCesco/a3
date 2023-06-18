@@ -1,7 +1,7 @@
 package controller;
 
 import java.util.Scanner;
-import models.Admin
+import models.Admin;
 import repositorio.RepoOng;
 import repositorio.RepoAdotante;
 import repositorio.RepoDono;
