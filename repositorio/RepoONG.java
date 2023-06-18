@@ -20,10 +20,13 @@ public class RepoOng {
         abrigos_cadastrados.remove(perfil);
     }
 
+
+
     public int listagem_ong(){
         int r = abrigos_cadastrados.size();
         return r;
     }
+
 
     public List<Ong> getAbrigos_cadastrados() {
         return abrigos_cadastrados;
