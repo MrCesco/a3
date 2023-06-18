@@ -4,7 +4,7 @@ public class Admin {
     private String credencial_adm;
 
     public Admin() {
-        credencial_adm = "4578xs";
+        credencial_adm = "123";
     }
 
     public String getCredencial_adm() {
