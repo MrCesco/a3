@@ -51,7 +51,14 @@ public class AppView {
         String credencial = AdminView.login_adm(leitor);
 
         if (credencial.equals(controller.getAdministrador().getCredencial_adm())) {
-            AdminView.menu_adm(leitor);
+            int op = AdminView.menu_adm(leitor);
+
+            switch(op){
+                case 1:
+                    System.out.println(controller.getOng_list().listagem_ong());
+                    break;
+            }
+
         } else {
             System.out.println("Credencial inválida");
         }
