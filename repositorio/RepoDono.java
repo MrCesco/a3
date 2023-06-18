@@ -12,12 +12,12 @@ public class RepoDono {
     }
 
     public RepoDono() {
-        donos = DonoDAO.getDonos();
+        // donos = DonoDAO.getDonos();
     }
 
     public void criarDono() {
         Dono d = new Dono("joaozinho", "rua tal 123", "1234", "asihudhiaus@gmail.com", "123123", "ong");
-        DonoDAO.salvarDono(d);
+        // DonoDAO.salvarDono(d);
         donos.add(d);
     }
 
@@ -33,7 +33,7 @@ public class RepoDono {
             }
         }
         try {
-            DonoDAO.deletarDono(p.getId());
+            // DonoDAO.deletarDono(p.getId());
             donos.remove(p);
         } catch (NullPointerException e) {
             System.out.println("Id " + id + " não encontrado");
