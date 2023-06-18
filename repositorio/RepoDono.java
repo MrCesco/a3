@@ -1,7 +1,7 @@
 package repositorio;
 
 import java.util.List;
-import Dao.DonoDAO;
+import a3_dao.DonoDAO;
 import models.Dono;
 
 public class RepoDono {

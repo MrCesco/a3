@@ -1,4 +1,4 @@
-package Dao
+package a3_dao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
