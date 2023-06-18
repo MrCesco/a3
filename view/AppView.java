@@ -53,7 +53,7 @@ public class AppView {
         if (credencial.equals(controller.getAdministrador().getCredencial_adm())) {
             int op = AdminView.menu_adm(leitor);
 
-            switch(op){
+            switch (op) {
                 case 1:
                     System.out.println(controller.getOng_list().listagem_ong());
                     break;
