@@ -29,11 +29,11 @@ public class OngView {
         System.out.println("Telefone do abrigo:");
         telefone = entrada.nextLine();
 
-        ONG ab_info = new ONG(nome, local_info, documento, email, telefone, cnpj, nome_abrigo);
+        ONG ong_info = new ONG(nome, local_info, documento, email, telefone, cnpj, nome_abrigo);
 
         System.out.println("Cadastro concluído");
-        System.out.println(ab_info);
+        System.out.println(ong_info);
 
-        return ab_info;
+        return ong_info;
     }
 }

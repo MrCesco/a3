@@ -3,6 +3,7 @@ package view;
 import java.util.Scanner;
 
 import controller.AppController;
+import models.ONG;
 
 public class AppView {
     private AppController controller;
@@ -38,6 +39,7 @@ public class AppView {
         Scanner leitor = new Scanner(System.in);
         controller.getOng_list().ong_add(OngView.inserir_ong(leitor));
 
+
     }
 
     public void dono_info() {
@@ -48,19 +50,6 @@ public class AppView {
 
     public void adm_acesso() {
         Scanner leitor = new Scanner(System.in);
-        String credencial = AdminView.login_adm(leitor);
 
-        if (credencial.equals(controller.getAdministrador().getCredencial_adm())) {
-            int op = AdminView.menu_adm(leitor);
-
-            switch (op) {
-                case 1:
-                    System.out.println(controller.getOng_list().listagem_ong());
-                    break;
-            }
-
-        } else {
-            System.out.println("Credencial inválida");
-        }
     }
 }
