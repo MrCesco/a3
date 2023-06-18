@@ -10,11 +10,9 @@ public class RepoDono {
     public RepoDono() {
         donos_cadastrados = new ArrayList<Dono>();
     }
-
     public void dono_add(Dono perfil) {
         donos_cadastrados.add(perfil);
     }
-
     public void listagem_donos(){
         String nome, cpf, endereco, cadastro;
         for (Dono item : donos_cadastrados) {
