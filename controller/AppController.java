@@ -4,22 +4,28 @@ import java.util.Scanner;
 import models.Admin;
 import repositorio.RepoOng;
 import repositorio.RepoAdotante;
+import repositorio.RepoCaes;
 import repositorio.RepoDono;
+import repositorio.RepoGatos;
 import view.AppView;
 
 public class AppController {
     RepoOng ong_list;
     RepoAdotante adotante_list;
     RepoDono dono_list;
-    AppView appview;
+    RepoCaes cao_list;
+    RepoGatos gato_list;
     Admin administrador;
+    AppView appview;
 
     public AppController() {
         ong_list = new RepoOng();
         adotante_list = new RepoAdotante();
         dono_list = new RepoDono();
-        appview = new AppView(this);
+        cao_list = new RepoCaes();
+        gato_list = new RepoGatos();
         administrador = new Admin();
+        appview = new AppView(this);
     }
 
     public void iniciar() {
