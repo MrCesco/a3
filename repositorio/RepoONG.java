@@ -22,9 +22,15 @@ public class RepoOng {
 
 
 
-    public int listagem_ong(){
-        int r = abrigos_cadastrados.size();
-        return r;
+    public void listagem_ong(){
+        String nome_representante, nome_ong, cnpj_ong;
+        for (Ong item : abrigos_cadastrados) {
+            nome_representante = item.getNome();
+            nome_ong = item.getR_social();
+            cnpj_ong = item.getCnpj();
+
+            System.out.println("ONG: " + nome_ong + "\n" + "Representante: " + nome_representante + "\n" + "CNPJ: " + cnpj_ong);
+        } 
     }
 
 

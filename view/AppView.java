@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import controller.AppController;
 import models.Ong;
+import repositorio.RepoOng;
 
 public class AppView {
     private AppController controller;
@@ -39,7 +40,6 @@ public class AppView {
         Scanner leitor = new Scanner(System.in);
         controller.getOng_list().ong_add(OngView.inserir_ong(leitor));
 
-
     }
 
     public void dono_info() {
@@ -48,8 +48,18 @@ public class AppView {
 
     }
 
-    public void adm_acesso() {
+    public void adm_info() {
         Scanner leitor = new Scanner(System.in);
+        int op = AdminView.validador_adm(leitor, controller.getAdministrador());
 
+        if (op == 1) {
+            controller.getOng_list().listagem_ong();
+        } else if (op == 2) {
+            controller.getAdotante_list().listagem_adotantes();
+        } else if (op == 3) {
+            controller.getDono_list().listagem_donos();
+        } else {
+            System.out.println("Opção inválida");
+        }
     }
 }
