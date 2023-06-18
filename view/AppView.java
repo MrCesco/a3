@@ -3,7 +3,7 @@ package view;
 import java.util.Scanner;
 
 import controller.AppController;
-import models.ONG;
+import models.Ong;
 
 public class AppView {
     private AppController controller;

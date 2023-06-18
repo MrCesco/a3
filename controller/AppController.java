@@ -3,20 +3,20 @@ package controller;
 import java.util.Scanner;
 
 import models.Admin;
-import repositorio.RepoONG;
+import repositorio.RepoOng;
 import repositorio.RepoAdotante;
 import repositorio.RepoDono;
 import view.AppView;
 
 public class AppController {
-    RepoONG ong_list;
+    RepoOng ong_list;
     RepoAdotante adotante_list;
     RepoDono dono_list;
     AppView appview;
     Admin administrador;
 
     public AppController() {
-        ong_list = new RepoONG();
+        ong_list = new RepoOng();
         adotante_list = new RepoAdotante();
         dono_list = new RepoDono();
         appview = new AppView(this);
@@ -43,7 +43,7 @@ public class AppController {
         }
     }
 
-    public RepoONG getOng_list() {
+    public RepoOng getOng_list() {
         return ong_list;
     }
 
