@@ -2,6 +2,7 @@ package controller;
 
 import java.util.Scanner;
 
+import models.Admin;
 import repositorio.RepoONG;
 import repositorio.RepoAdotante;
 import repositorio.RepoDono;
@@ -12,12 +13,14 @@ public class AppController {
     RepoAdotante adotante_list;
     RepoDono dono_list;
     AppView appview;
+    Admin administrador;
 
     public AppController() {
         ong_list = new RepoONG();
         adotante_list = new RepoAdotante();
         dono_list = new RepoDono();
         appview = new AppView(this);
+        administrador = new Admin();
     }
 
     public void iniciar() {
@@ -34,6 +37,9 @@ public class AppController {
             case 3:
                 appview.dono_info();
                 break;
+            case 4:
+                appview.adm_acesso();
+                break;
         }
     }
 
@@ -47,5 +53,9 @@ public class AppController {
 
     public RepoDono getDono_list() {
         return dono_list;
+    }
+
+    public Admin getAdministrador() {
+        return administrador;
     }
 }

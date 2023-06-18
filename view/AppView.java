@@ -13,13 +13,19 @@ public class AppView {
 
     public int menu_principal(Scanner entrada) {
         int op;
-
-        System.out.println("Bem-vindo ao nosso APP, digite a opção desejada");
-        System.out.print("1- Entrar como adotante\n2- Entrar como representante de ONG\n3- Entrar como dono de pet\n");
-
+        System.out.print("Inicializando o programa, por favor, escolha o tipo de acesso:\n1- Cliente\n2- ADM\n");
         op = entrada.nextInt();
-        entrada.nextLine();
 
+        if (op == 1) {
+            System.out.println("Bem-vindo ao nosso APP, digite a opção desejada");
+            System.out.print(
+                    "1- Entrar como adotante\n2- Entrar como representante de ONG\n3- Entrar como dono de pet\n");
+            op = entrada.nextInt();
+        } else {
+            System.out.println("Acesso como Administrador solicitado");
+            op = 4;
+        }
+        entrada.nextLine();
         return op;
     }
 
@@ -38,5 +44,16 @@ public class AppView {
         Scanner leitor = new Scanner(System.in);
         controller.getDono_list().dono_add(DonoView.inserir_dono(leitor));
 
+    }
+
+    public void adm_acesso() {
+        Scanner leitor = new Scanner(System.in);
+        String credencial = AdminView.login_adm(leitor);
+
+        if (credencial.equals(controller.getAdministrador().getCredencial_adm())) {
+            AdminView.menu_adm(leitor);
+        } else {
+            System.out.println("Credencial inválida");
+        }
     }
 }
