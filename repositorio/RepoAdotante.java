@@ -12,10 +12,6 @@ public class RepoAdotante {
         adotantes_cadastrados = new ArrayList<Adotante>();
     }
 
-    public void a_add(Adotante perfil) {
-        adotantes_cadastrados.add(perfil);
-    }
-
     public void listagem_adotantes(){
         String nome, cpf, endereco, cadastro;
         for (Adotante item : adotantes_cadastrados) {
@@ -26,5 +22,9 @@ public class RepoAdotante {
 
             System.out.println("Adotante: " + nome + "\n" + "Doc: " + cpf + "\n" + "Endereço: " + endereco + "Tipo de cadastro:" + cadastro);
         } 
+    }
+
+    public List<Adotante> getAdotantes_cadastrados() {
+        return adotantes_cadastrados;
     }
 }

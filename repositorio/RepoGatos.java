@@ -11,6 +11,19 @@ public class RepoGatos {
         gatos_cadastrados = new ArrayList<Gatos>();
     }
 
+    public void listagem_caes() {
+        String nome, cor, raca, genero;
+        for (Gatos item : gatos_cadastrados) {
+            nome = item.getNome();
+            cor = item.getCor();
+            genero = item.getGenero();
+            raca = item.getRaca();
+
+            System.out.printf("Gato:\nNome:%s\nCor:%s\nGênero:%s\nRaça:%s\n", nome, cor, genero, raca);
+        }
+
+    }
+
     public void deletarGatosById(int id) {
         Gatos g = null;
         for (Gatos g1 : gatos_cadastrados) {

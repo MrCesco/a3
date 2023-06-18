@@ -10,20 +10,20 @@ import repositorio.RepoGatos;
 import view.AppView;
 
 public class AppController {
-    RepoOng ong_list;
-    RepoAdotante adotante_list;
-    RepoDono dono_list;
-    RepoCaes cao_list;
-    RepoGatos gato_list;
+    RepoOng repo_ong;
+    RepoAdotante repo_adotante;
+    RepoDono repo_dono;
+    RepoCaes repo_cao;
+    RepoGatos repo_gato;
     Admin administrador;
     AppView appview;
 
     public AppController() {
-        ong_list = new RepoOng();
-        adotante_list = new RepoAdotante();
-        dono_list = new RepoDono();
-        cao_list = new RepoCaes();
-        gato_list = new RepoGatos();
+        repo_ong = new RepoOng();
+        repo_adotante = new RepoAdotante();
+        repo_dono = new RepoDono();
+        repo_cao = new RepoCaes();
+        repo_gato = new RepoGatos();
         administrador = new Admin();
         appview = new AppView(this);
     }
@@ -49,16 +49,24 @@ public class AppController {
         }
     }
 
-    public RepoOng getOng_list() {
-        return ong_list;
+    public RepoOng getRepo_ong() {
+        return repo_ong;
     }
 
-    public RepoAdotante getAdotante_list() {
-        return adotante_list;
+    public RepoAdotante getRepo_adotante() {
+        return repo_adotante;
     }
 
-    public RepoDono getDono_list() {
-        return dono_list;
+    public RepoDono getRepo_dono() {
+        return repo_dono;
+    }
+
+    public RepoCaes getRepo_cao() {
+        return repo_cao;
+    }
+
+    public RepoGatos getRepo_gato() {
+        return repo_gato;
     }
 
     public Admin getAdministrador() {
