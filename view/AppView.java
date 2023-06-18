@@ -1,10 +1,7 @@
 package view;
 
 import java.util.Scanner;
-
 import controller.AppController;
-import models.Ong;
-import repositorio.RepoOng;
 
 public class AppView {
     private AppController controller;
