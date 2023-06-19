@@ -4,9 +4,9 @@ public class Ong extends Pessoa {
     private String cnpj;
     private String r_social;
 
-    public Ong(String nome, String endereco, String cpf, String email, String telefone, String cnpj,
+    public Ong(String nome, String endereco, String email, String telefone, String cnpj,
             String r_social) {
-        super(nome, endereco, cpf, email, telefone);
+        super(nome, endereco, email, telefone);
         this.cnpj = cnpj;
         this.r_social = r_social;
     }
