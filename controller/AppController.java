@@ -35,13 +35,13 @@ public class AppController {
         switch (selection) {
             case 1:
                 appview.adotante_info();
-                appview.adm_info();
                 break;
             case 2:
                 appview.ong_info();
                 break;
             case 3:
                 appview.dono_info();
+                appview.cao_info();
                 break;
             case 4:
                 appview.adm_info();
