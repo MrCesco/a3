@@ -50,6 +50,11 @@ public class AppView {
         controller.getRepo_cao().getCaes_cadastrados().add(CaesView.inserir_cao(leitor));
     }
 
+    public void gato_info() {
+        Scanner leitor = new Scanner(System.in);
+        controller.getRepo_gato().getGatos_cadastrados().add(GatosView.cadastro_gato(leitor));
+    }
+
     public void adm_info() {
         Scanner leitor = new Scanner(System.in);
         int op = AdminView.validador_adm(leitor, controller.getAdministrador());

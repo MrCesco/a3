@@ -13,7 +13,7 @@ public class RepoGatos {
         gatos_cadastrados = new ArrayList<Gatos>();
     }
 
-    public void listagem_caes() {
+    public void listagem_gatos() {
         String nome, cor, raca, genero;
         FichaMedica dados_medicos;
 
@@ -41,5 +41,9 @@ public class RepoGatos {
         } catch (NullPointerException e) {
             System.out.println("Id " + id + " não encontrado");
         }
+    }
+
+    public List<Gatos> getGatos_cadastrados() {
+        return gatos_cadastrados;
     }
 }
