@@ -3,6 +3,7 @@ package repositorio;
 import java.util.ArrayList;
 import java.util.List;
 import models.Caes;
+import models.FichaMedica;
 
 public class RepoCaes {
     private List<Caes> caes_cadastrados;
@@ -13,13 +14,15 @@ public class RepoCaes {
 
     public void listagem_caes() {
         String nome, cor, raca, genero;
+        FichaMedica dados_medicos;
         for (Caes item : caes_cadastrados) {
             nome = item.getNome();
             cor = item.getCor();
             genero = item.getGenero();
             raca = item.getRaca();
+            dados_medicos = item.getFichaMedica();
 
-            System.out.printf("Cachorro:\nNome:%s\nCor:%s\nGênero:%s\nRaça:%s\n", nome, cor, genero, raca);
+            System.out.printf("Cachorro:\nNome:%s\nCor:%s\nGênero:%s\nRaça:%s\nDados médicos:\n", nome, cor, genero, raca, dados_medicos);
         }
 
     }

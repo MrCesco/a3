@@ -1,13 +1,12 @@
 package view;
 
 import java.util.Scanner;
-
-import models.Caes;
 import models.FichaMedica;
+import models.Gatos;
 import models.Vacina;
 
-public class CaesView {
-    public static Caes inserir_cao(Scanner entrada) {
+public class GatosView {
+    public static Gatos cadastro_gato(Scanner entrada) {
         System.out.println("Você entrou na área de cadastro para adotar um pet, informe seus dados");
 
         String nome, data, cor, peso, genero, raca, porte;
@@ -36,9 +35,9 @@ public class CaesView {
 
         System.out.println("Por favor, informe os dados médicos do seu pet");
 
-        String nome_vacina, data_aplicacao, nome_medicamento, data_medicamento;
+        String nome_vacina, data_aplicacao;
         int op;
-        boolean castrado = false;
+        boolean teste = false;
 
         System.out.println("Qual é o nome da vacina mais recente que seu pet tomou?");
         nome_vacina = entrada.nextLine();
@@ -47,26 +46,20 @@ public class CaesView {
         data_aplicacao = entrada.nextLine();
 
         Vacina v_info = new Vacina(data_aplicacao, nome_vacina);
-
-        System.out.println("Qual é o nome do medicamento que seu pet toma ou costumava tomar?");
-        nome_medicamento = entrada.nextLine();
-
-        System.out.println("Data da última dose:");
-        data_medicamento = entrada.nextLine();
-
-        System.out.println("Seu pet é castrado? (1- Sim  ou 2- Não)");
+        
+        System.out.println("Seu pet passou no teste FIV e FELV  (1- Sim  ou 2- Não)");
         op = entrada.nextInt();
 
         if (op == 1) {
-            castrado = true;
+            teste = true;
         }
 
-        FichaMedica f_info = new FichaMedica(castrado, v_info);
+        FichaMedica f_info = new FichaMedica(teste, v_info);
 
-        Caes c_info = new Caes(nome, data, cor, peso, genero, raca, f_info, porte);
+       Gatos g_info = new Gatos(nome, data, cor, peso, genero, raca, f_info,teste );
 
         System.out.println("Cadastro concluído");
 
-        return c_info;
+        return g_info;
     }
 }
