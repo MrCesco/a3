@@ -9,7 +9,7 @@ public class GatosView {
     public static Gatos cadastro_gato(Scanner entrada) {
         System.out.println("Você entrou na área de cadastro para adotar um pet, informe seus dados");
 
-        String nome, data, cor, peso, genero, raca, porte;
+        String nome, data, cor, peso, genero, raca;
 
         System.out.println("Nome do seu pet:");
         nome = entrada.nextLine();
@@ -29,10 +29,6 @@ public class GatosView {
         System.out.println("Raça:");
         raca = entrada.nextLine();
 
-        System.out.println("Porte do seu pet:");
-        porte = entrada.nextLine();
-
-
         System.out.println("Por favor, informe os dados médicos do seu pet");
 
         String nome_vacina, data_aplicacao;
@@ -47,7 +43,7 @@ public class GatosView {
 
         Vacina v_info = new Vacina(data_aplicacao, nome_vacina);
         
-        System.out.println("Seu pet passou no teste FIV e FELV  (1- Sim  ou 2- Não)");
+        System.out.println("Seu pet testou positivo para FIV ou FELV? (1- Sim  ou 2- Não)");
         op = entrada.nextInt();
 
         if (op == 1) {
@@ -56,7 +52,7 @@ public class GatosView {
 
         FichaMedica f_info = new FichaMedica(teste, v_info);
 
-       Gatos g_info = new Gatos(nome, data, cor, peso, genero, raca, f_info,teste );
+       Gatos g_info = new Gatos(nome, data, cor, peso, genero, raca, f_info, teste);
 
         System.out.println("Cadastro concluído");
 

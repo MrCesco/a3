@@ -36,7 +36,7 @@ public class CaesView {
 
         System.out.println("Por favor, informe os dados médicos do seu pet");
 
-        String nome_vacina, data_aplicacao, nome_medicamento, data_medicamento;
+        String nome_vacina, data_aplicacao;
         int op;
         boolean castrado = false;
 
@@ -47,12 +47,6 @@ public class CaesView {
         data_aplicacao = entrada.nextLine();
 
         Vacina v_info = new Vacina(data_aplicacao, nome_vacina);
-
-        System.out.println("Qual é o nome do medicamento que seu pet toma ou costumava tomar?");
-        nome_medicamento = entrada.nextLine();
-
-        System.out.println("Data da última dose:");
-        data_medicamento = entrada.nextLine();
 
         System.out.println("Seu pet é castrado? (1- Sim  ou 2- Não)");
         op = entrada.nextInt();
