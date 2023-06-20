@@ -10,15 +10,7 @@ public class RepoOng {
     public RepoOng() {
         abrigos_cadastrados = new ArrayList<Ong>();
     }
-
-    public void ong_add(Ong perfil) {
-        abrigos_cadastrados.add(perfil);
-    }
-
-    public void remover_abrigo(Ong perfil) {
-        abrigos_cadastrados.remove(perfil);
-    }
-
+    
     public void listagem_ong(){
         String nome_representante, nome_ong, cnpj_ong;
         for (Ong item : abrigos_cadastrados) {

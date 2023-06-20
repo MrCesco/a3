@@ -13,7 +13,7 @@ public class AdminView {
         senha = entrada.nextLine();
         
         if (senha.equals(a1.getCredencial_adm())) {
-            System.out.print("Bem-vindo ao menu de administrador\n1- Listar ONGs\n2- Listar Adotantes\n3- Listar Donos\n");
+            System.out.print("Bem-vindo ao menu de administrador\n1- Listar ONGs\n2- Listar Adotantes\n3- Listar Donos\n4- Listar Cães\n5- Listar Gatos");
             op = entrada.nextInt();
         } else {
             System.out.println("Credencial inválida");

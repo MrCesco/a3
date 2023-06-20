@@ -30,19 +30,24 @@ public class AppView {
 
     public void adotante_info() {
         Scanner leitor = new Scanner(System.in);
-        controller.getAdotante_list().a_add(AdotanteView.inserir_adotante(leitor));
+        controller.getRepo_adotante().getAdotantes_cadastrados().add(AdotanteView.inserir_adotante(leitor));
     }
 
     public void ong_info() {
         Scanner leitor = new Scanner(System.in);
-        controller.getOng_list().ong_add(OngView.inserir_ong(leitor));
+        controller.getRepo_ong().getAbrigos_cadastrados().add(OngView.inserir_ong(leitor));
 
     }
 
     public void dono_info() {
         Scanner leitor = new Scanner(System.in);
-        controller.getDono_list().dono_add(DonoView.inserir_dono(leitor));
+        controller.getRepo_dono().getDonos_cadastrados().add(DonoView.inserir_dono(leitor));
 
+    }
+
+    public void cao_info() {
+        Scanner leitor = new Scanner(System.in);
+        controller.getRepo_cao().getCaes_cadastrados().add(CaesView.inserir_cao(leitor));
     }
 
     public void adm_info() {
@@ -50,11 +55,11 @@ public class AppView {
         int op = AdminView.validador_adm(leitor, controller.getAdministrador());
 
         if (op == 1) {
-            controller.getOng_list().listagem_ong();
+            controller.getRepo_ong().listagem_ong();
         } else if (op == 2) {
-            controller.getAdotante_list().listagem_adotantes();
+            controller.getRepo_adotante().listagem_adotantes();
         } else if (op == 3) {
-            controller.getDono_list().listagem_donos();
+            controller.getRepo_dono().listagem_donos();
         } else {
             System.out.println("Opção inválida");
         }

@@ -16,6 +16,4 @@ public class Caes extends Animais {
     public void setPorte(String porte) {
         this.porte = porte;
     }    
-
-    
 }
