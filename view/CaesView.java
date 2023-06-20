@@ -7,8 +7,8 @@ import models.FichaMedica;
 import models.Vacina;
 
 public class CaesView {
-    public static Caes inserir_cao(Scanner entrada) {
-        System.out.println("Você entrou na área de cadastro para adotar um pet, informe seus dados");
+    public Caes inserir_cao(Scanner entrada) {
+        System.out.println("Você entrou na área de cadastro de cães, informe os dados do seu pet");
 
         String nome, data, cor, peso, genero, raca, porte;
 
@@ -32,7 +32,6 @@ public class CaesView {
 
         System.out.println("Porte do seu pet:");
         porte = entrada.nextLine();
-
 
         System.out.println("Por favor, informe os dados médicos do seu pet");
 
@@ -60,6 +59,8 @@ public class CaesView {
         Caes c_info = new Caes(nome, data, cor, peso, genero, raca, f_info, porte);
 
         System.out.println("Cadastro concluído");
+        System.out.println("/////////////");
+        entrada.nextLine();
 
         return c_info;
     }

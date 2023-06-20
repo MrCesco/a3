@@ -6,8 +6,8 @@ import models.Gatos;
 import models.Vacina;
 
 public class GatosView {
-    public static Gatos cadastro_gato(Scanner entrada) {
-        System.out.println("Você entrou na área de cadastro para adotar um pet, informe seus dados");
+    public Gatos cadastro_gato(Scanner entrada) {
+        System.out.println("Você entrou na área de cadastro de gatos, informe seus dados");
 
         String nome, data, cor, peso, genero, raca;
 
@@ -42,7 +42,7 @@ public class GatosView {
         data_aplicacao = entrada.nextLine();
 
         Vacina v_info = new Vacina(data_aplicacao, nome_vacina);
-        
+
         System.out.println("Seu pet testou positivo para FIV ou FELV? (1- Sim  ou 2- Não)");
         op = entrada.nextInt();
 
@@ -52,9 +52,11 @@ public class GatosView {
 
         FichaMedica f_info = new FichaMedica(teste, v_info);
 
-       Gatos g_info = new Gatos(nome, data, cor, peso, genero, raca, f_info, teste);
+        Gatos g_info = new Gatos(nome, data, cor, peso, genero, raca, f_info, teste);
 
         System.out.println("Cadastro concluído");
+        System.out.println("/////////////");
+        entrada.nextLine();
 
         return g_info;
     }

@@ -2,8 +2,6 @@ package repositorio;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import models.FichaMedica;
 import models.Gatos;
 
 public class RepoGatos {
@@ -14,17 +12,21 @@ public class RepoGatos {
     }
 
     public void listagem_gatos() {
-        String nome, cor, raca, genero;
-        FichaMedica dados_medicos;
+        System.out.println("Gatos disponíveis:");
 
-        for (Gatos item : gatos_cadastrados) {
-            nome = item.getNome();
-            cor = item.getCor();
-            genero = item.getGenero();
-            raca = item.getRaca();
-            dados_medicos = item.getFichaMedica();
+        String nome, cor, raca, genero, dados_medicos;
 
-            System.out.printf("Gato:\nNome:%s\nCor:%s\nGênero:%s\nRaça:%s\nInformações médicas:", nome, cor, genero, raca, dados_medicos);
+        for (Gatos pet : gatos_cadastrados) {
+            nome = pet.getNome();
+            cor = pet.getCor();
+            genero = pet.getGenero();
+            raca = pet.getRaca();
+            dados_medicos = pet.getFichaMedica().toString();
+
+            System.out.printf(
+                    "Pet " + pet.getId()
+                            + "\nNome: %s\nCor: %s\nGênero: %s\nRaça: %s\nInformações médicas: %s\n",
+                    nome, cor, genero, raca, dados_medicos);
         }
 
     }

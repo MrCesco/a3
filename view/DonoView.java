@@ -5,7 +5,9 @@ import java.util.Scanner;
 import models.Dono;
 
 public class DonoView {
-    public static Dono inserir_dono(Scanner entrada) {
+    public Dono inserir_dono(Scanner entrada) {
+        System.out.println("Você entrou na área de cadastro de dono, informe seus dados");
+
         String nome, local_info, email, telefone, documento;
         String tipo = "Dono";
 
@@ -27,6 +29,8 @@ public class DonoView {
         Dono d_info = new Dono(nome, local_info, documento, email, telefone, tipo);
 
         System.out.println("Cadastro concluído");
+        System.out.println("/////////////");
+
         System.out.println(d_info);
 
         return d_info;

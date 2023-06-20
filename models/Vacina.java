@@ -2,11 +2,11 @@ package models;
 
 public class Vacina {
     private String dataAplicacao;
-    private String nome;
+    private String nome_vacina;
     
     public Vacina(String dataAplicacao, String nome) {
         this.dataAplicacao = dataAplicacao;
-        this.nome = nome;
+        this.nome_vacina = nome;
     }
 
     public String getDataAplicacao() {
@@ -17,13 +17,16 @@ public class Vacina {
         this.dataAplicacao = dataAplicacao;
     }
 
-    public String getNome() {
-        return nome;
+    public String getNome_vacina() {
+        return nome_vacina;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNome_vacina(String nome) {
+        this.nome_vacina = nome;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return " Vacina: " + nome_vacina + " aplicada no dia: " + dataAplicacao + "\n";
+    }
 }

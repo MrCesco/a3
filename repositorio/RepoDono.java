@@ -12,6 +12,8 @@ public class RepoDono {
     }
 
     public void listagem_donos() {
+        System.out.println("Donos cadastrados:");
+
         String nome, cpf, endereco, cadastro;
         for (Dono item : donos_cadastrados) {
             nome = item.getNome();
@@ -19,8 +21,11 @@ public class RepoDono {
             endereco = item.getEndereco();
             cadastro = item.getTipo_cadastro();
 
-            System.out.println("Dono " + nome + "\n" + "Doc: " + cpf + "\n" + "Endereço: " + endereco
-                    + "Tipo de cadastro:" + cadastro);
+            System.out.println("Dono: " + nome + "\n" + "Doc: " + cpf + "\n" + "Endereço: " + endereco
+                    + "\nTipo de cadastro:" + cadastro);
+
+            System.out.println("/////////////");
+
         }
     }
 

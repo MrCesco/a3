@@ -1,12 +1,17 @@
 package models;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class Pessoa {
+    private static final AtomicInteger count = new AtomicInteger(0); 
+    private int id;   
     private String nome;
     private String endereco;
     private String email;
     private String telefone;
 
     public Pessoa(String nome, String endereco, String email, String telefone) {
+        id = count.incrementAndGet();
         this.nome = nome;
         this.endereco = endereco;
         this.email = email;
@@ -44,6 +49,18 @@ public class Pessoa {
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
+    
+    public int getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
 
+    @Override
+    public String toString() {
+        return "Informações do perfil:\nNome: " + nome + "\nEndereço: " + endereco + "\nEmail: " + email + "\nTelefone: "
+                + telefone + "\n";
+    }
 }

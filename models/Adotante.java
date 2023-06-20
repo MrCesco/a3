@@ -26,8 +26,9 @@ public class Adotante extends Pessoa {
         this.tipo_cadastro = tipo_cadastro;
     }
 
-     @Override
+    @Override
     public String toString() {
-        return "Adotante [tipo_cadastro=" + tipo_cadastro + "]";
+        return super.toString() + "Informações adicionais do cadastro:\nCPF: " + cpf + "\nTipo de cadastro: "
+                + tipo_cadastro + "\n";
     }
 }
