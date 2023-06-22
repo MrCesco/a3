@@ -12,6 +12,8 @@ public class RepoDono {
     }
 
     public void listagem_donos() {
+        System.out.println("Donos cadastrados:");
+
         String nome, cpf, endereco, cadastro;
         for (Dono item : donos_cadastrados) {
             nome = item.getNome();
@@ -19,9 +21,29 @@ public class RepoDono {
             endereco = item.getEndereco();
             cadastro = item.getTipo_cadastro();
 
-            System.out.println("Dono " + nome + "\n" + "Doc: " + cpf + "\n" + "Endereço: " + endereco
-                    + "Tipo de cadastro:" + cadastro);
+            System.out.println("Dono: " + nome + "\n" + "Doc: " + cpf + "\n" + "Endereço: " + endereco
+                    + "\nTipo de cadastro:" + cadastro);
+
+            System.out.println("/////////////");
+
         }
+    }
+
+    public void deletarDonoById(int id) {
+        Dono d1 = null;
+        for (Dono item : donos_cadastrados) {
+            if (item.getId() == id) {
+                d1 = item;
+            }
+        }
+
+        try {
+            donos_cadastrados.remove(d1);
+        } catch (NullPointerException e) {
+            System.out.println("Id " + id + " não encontrado");
+        }
+
+        listagem_donos();
     }
 
     public List<Dono> getDonos_cadastrados() {

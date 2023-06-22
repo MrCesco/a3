@@ -23,5 +23,10 @@ public class FichaMedica {
 
     public void setVacinas(Vacina vacinas) {
         this.vacinas = vacinas;
-    }    
+    }
+
+    @Override
+    public String toString() {
+        return "Castrado: " + castracao + "/" + vacinas.toString();
+    }
 }

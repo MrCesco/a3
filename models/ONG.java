@@ -29,6 +29,7 @@ public class Ong extends Pessoa {
 
     @Override
     public String toString() {
-        return "Abrigo [cnpj=" + cnpj + ", r_social=" + r_social + "]";
+        return super.toString() + "Informações adicionais do cadastro:\nCNPJ: " + cnpj + "\nRazão social: "
+                + r_social + "\n";
     }
 }
