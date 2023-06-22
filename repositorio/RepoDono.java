@@ -29,6 +29,23 @@ public class RepoDono {
         }
     }
 
+    public void deletarDonoById(int id) {
+        Dono d1 = null;
+        for (Dono item : donos_cadastrados) {
+            if (item.getId() == id) {
+                d1 = item;
+            }
+        }
+
+        try {
+            donos_cadastrados.remove(d1);
+        } catch (NullPointerException e) {
+            System.out.println("Id " + id + " não encontrado");
+        }
+
+        listagem_donos();
+    }
+
     public List<Dono> getDonos_cadastrados() {
         return donos_cadastrados;
     }

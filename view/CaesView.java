@@ -4,10 +4,11 @@ import java.util.Scanner;
 
 import models.Caes;
 import models.FichaMedica;
+import models.Pessoa;
 import models.Vacina;
 
 public class CaesView {
-    public Caes inserir_cao(Scanner entrada) {
+    public Caes inserir_cao(Scanner entrada, Pessoa responsavel) {
         System.out.println("Você entrou na área de cadastro de cães, informe os dados do seu pet");
 
         String nome, data, cor, peso, genero, raca, porte;
@@ -56,7 +57,7 @@ public class CaesView {
 
         FichaMedica f_info = new FichaMedica(castrado, v_info);
 
-        Caes c_info = new Caes(nome, data, cor, peso, genero, raca, f_info, porte);
+        Caes c_info = new Caes(nome, data, cor, peso, genero, raca, f_info, responsavel, porte);
 
         System.out.println("Cadastro concluído");
         System.out.println("/////////////");

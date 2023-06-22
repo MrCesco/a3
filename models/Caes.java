@@ -4,8 +4,8 @@ public class Caes extends Animais {
     private String porte;
 
     public Caes(String nome, String dataNascimento, String cor, String peso, String genero, String raca,
-            FichaMedica fichaMedica, String porte) {
-        super(nome, dataNascimento, cor, peso, genero, raca, fichaMedica);
+            FichaMedica fichaMedica, Pessoa responsavel, String porte) {
+        super(nome, dataNascimento, cor, peso, genero, raca, fichaMedica, responsavel);
         this.porte = porte;
     }
 
@@ -15,5 +15,5 @@ public class Caes extends Animais {
 
     public void setPorte(String porte) {
         this.porte = porte;
-    }    
+    }
 }

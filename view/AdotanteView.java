@@ -3,6 +3,8 @@ package view;
 import java.util.Scanner;
 
 import models.Adotante;
+import repositorio.RepoCaes;
+import repositorio.RepoGatos;
 
 public class AdotanteView {
     public Adotante inserir_adotante(Scanner entrada) {
@@ -34,5 +36,27 @@ public class AdotanteView {
         System.out.println(a_info);
 
         return a_info;
+    }
+
+    public void iniciar_adoção(Scanner entrada, RepoCaes cadastros_caes, RepoGatos cadastros_gatos) {
+        int op;
+        System.out.println("Qual animal você gostaria de adotar?\n1- Cachorro\n2- Gato");
+        op = entrada.nextInt();
+
+        if (op == 1) {
+            cadastros_caes.listagem_caes();
+            System.out.println("Selecione o id do seu novo melhor amigo(a)");
+            op = entrada.nextInt();
+
+            System.out.println("Você sinalizou interesse nesse pet, uma visita será marcada");
+            cadastros_caes.deletarCaesById(op);
+        } else if (op == 2) {
+            cadastros_gatos.listagem_gatos();
+            System.out.println("Selecione o id do seu novo melhor amigo(a)");
+            op = entrada.nextInt();
+
+            System.out.println("Você sinalizou interesse nesse pet, uma visita será marcada");
+            cadastros_gatos.listagem_gatos();
+        }
     }
 }

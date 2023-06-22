@@ -27,6 +27,6 @@ public class FichaMedica {
 
     @Override
     public String toString() {
-        return "Castrado: " + castracao + "/" + vacinas.toString() + "\n";
+        return "Castrado: " + castracao + "/" + vacinas.toString();
     }
 }

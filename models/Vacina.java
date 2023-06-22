@@ -27,6 +27,6 @@ public class Vacina {
 
     @Override
     public String toString() {
-        return " Vacina: " + nome_vacina + " aplicada no dia: " + dataAplicacao + "\n";
+        return " Vacina: " + nome_vacina + " aplicada no dia: " + dataAplicacao;
     }
 }

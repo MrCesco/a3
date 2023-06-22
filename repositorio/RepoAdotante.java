@@ -28,6 +28,23 @@ public class RepoAdotante {
         }
     }
 
+    public void deletarAdotanteById(int id) {
+        Adotante a2 = null;
+        for (Adotante item : adotantes_cadastrados) {
+            if (item.getId() == id) {
+                a2 = item;
+            }
+        }
+
+        try {
+            adotantes_cadastrados.remove(a2);
+        } catch (NullPointerException e) {
+            System.out.println("Id " + id + " não encontrado");
+        }
+
+        listagem_adotantes();
+    }
+
     public List<Adotante> getAdotantes_cadastrados() {
         return adotantes_cadastrados;
     }

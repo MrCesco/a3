@@ -3,8 +3,8 @@ package models;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public abstract class Animais {
-    private static final AtomicInteger count = new AtomicInteger(0); 
-    private int id;   
+    private static final AtomicInteger count = new AtomicInteger(0);
+    private int id;
     private String nome;
     private String dataNascimento;
     private String cor;
@@ -12,10 +12,11 @@ public abstract class Animais {
     private String genero;
     private String raca;
     private FichaMedica fichaMedica;
+    private Pessoa responsavel;
 
     public Animais(String nome, String dataNascimento, String cor, String peso, String genero, String raca,
-            FichaMedica fichaMedica) {
-        id = count.incrementAndGet(); 
+            FichaMedica fichaMedica, Pessoa responsavel) {
+        id = count.incrementAndGet();
         this.nome = nome;
         this.dataNascimento = dataNascimento;
         this.cor = cor;
@@ -23,6 +24,15 @@ public abstract class Animais {
         this.genero = genero;
         this.raca = raca;
         this.fichaMedica = fichaMedica;
+        this.responsavel = responsavel;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -80,12 +90,12 @@ public abstract class Animais {
     public void setFichaMedica(FichaMedica fichaMedica) {
         this.fichaMedica = fichaMedica;
     }
-    
-     public int getId() {
-        return id;
+
+    public Pessoa getResponsavel() {
+        return responsavel;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setResponsavel(Pessoa responsavel) {
+        this.responsavel = responsavel;
     }
 }

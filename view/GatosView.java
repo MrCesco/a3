@@ -3,10 +3,11 @@ package view;
 import java.util.Scanner;
 import models.FichaMedica;
 import models.Gatos;
+import models.Pessoa;
 import models.Vacina;
 
 public class GatosView {
-    public Gatos cadastro_gato(Scanner entrada) {
+    public Gatos cadastro_gato(Scanner entrada, Pessoa responsavel) {
         System.out.println("Você entrou na área de cadastro de gatos, informe seus dados");
 
         String nome, data, cor, peso, genero, raca;
@@ -52,7 +53,7 @@ public class GatosView {
 
         FichaMedica f_info = new FichaMedica(teste, v_info);
 
-        Gatos g_info = new Gatos(nome, data, cor, peso, genero, raca, f_info, teste);
+        Gatos g_info = new Gatos(nome, data, cor, peso, genero, raca, f_info, responsavel, teste);
 
         System.out.println("Cadastro concluído");
         System.out.println("/////////////");
