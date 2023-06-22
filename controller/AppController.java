@@ -83,6 +83,7 @@ public class AppController {
             case 4:
                 repo_adotante.getAdotantes_cadastrados().add(adotante_view.inserir_adotante(leitor));
                 adotante_view.iniciar_adoção(leitor, repo_cao, repo_gato);
+                iniciar();
                 break;
             case 7:
                 if (admin_view.validador_adm(leitor, administrador)) {
@@ -180,7 +181,7 @@ public class AppController {
                 }
                 break;
             default:
-                inciar_adm(entrada);
+                iniciar();
                 break;
         }
     }

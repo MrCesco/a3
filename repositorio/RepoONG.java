@@ -18,7 +18,7 @@ public class RepoOng {
             nome_ong = item.getR_social();
             cnpj_ong = item.getCnpj();
 
-            System.out.println("ONG " + item.getId() + "\n" + nome_ong + "\n" + "Representante: " + nome_representante
+            System.out.println("Perfil " + item.getId() + "\nNome da ONG: " + nome_ong + "\n" + "Representante: " + nome_representante
                     + "\n" + "CNPJ: " + cnpj_ong);
         }
     }

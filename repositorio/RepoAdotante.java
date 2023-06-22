@@ -20,8 +20,8 @@ public class RepoAdotante {
             endereco = pessoa.getEndereco();
             cadastro = pessoa.getTipo_cadastro();
 
-            System.out.println("Adotante " + pessoa.getId() + "Nome: " + nome + "\n" + "Doc: " + cpf + "\n" + "Endereço: " + endereco
-                    + "Tipo de cadastro:" + cadastro);
+            System.out.println("Perfil " + pessoa.getId() + "\nNome: " + nome + "\n" + "Doc: " + cpf + "\n" + "Endereço: " + endereco
+                    + "\nTipo de cadastro: " + cadastro);
                     
             System.out.println("/////////////");
 
